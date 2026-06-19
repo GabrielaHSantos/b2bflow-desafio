@@ -9,6 +9,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def main():
+    """orquestra o fluxo principal onde busca os contatos no supabase
+    e envia uma mensagem personalizada via whatsapp para cada um
+    """
 
     logger.info("Iniciando o processo de envio de mensagens...")
 

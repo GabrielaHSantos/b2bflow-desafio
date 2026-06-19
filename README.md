@@ -17,6 +17,14 @@ CREATE TABLE contatos (
 );
 ```
 
+Para popular a tabela rapidamente com dados de teste, execute:
+
+```
+INSERT INTO contatos (nome, telefone) VALUES 
+('Juliano', '5521999999999');
+```
+
+
 > **Obs.:** O campo `telefone` deve seguir o formato `5521999999999` (código do país + DDD + número).
 
 ## Variáveis de ambiente
@@ -32,16 +40,25 @@ ZAPI_TOKEN=seu_token_instancia
 
 ## Como rodar
 
-1. Instale as dependências:
+1. Crie e ative um ambiente virtual:
+
+   - **Windows:** `python -m venv .venv` e `.venv\Scripts\activate`
+   - **Linux/Mac:** `python3 -m venv .venv` e `source .venv/bin/activate`
+
+
+2. Instale as dependências:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Execute:
+3. Execute:
+
 ```bash
 python main.py
 ```
 
 ## Evidências
 
+### Mensagem recebida no WhatsApp
 ![Mensagem enviada](evidencias/mensagem_enviada.png)
